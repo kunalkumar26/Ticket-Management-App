@@ -1,0 +1,178 @@
+/* *{} is universal selector */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* border: 2px solid red; */
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+
+}
+
+/* Header Section */
+
+.header-container{
+    /* border: 1px solid black; */
+    height: 5.2rem;
+    background-color: #333;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    /* padding-left: 3rem; */
+}
+
+.header-container>*{
+    background-color: rgb(85, 78, 78);
+    height: 65%;
+    border-radius: 6px;
+
+}
+
+.color-group_container{
+    /* % is a relative unit and it depends upon its parent */
+    width: 40%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.color{
+    height: 50%;
+    width: 12%;
+    border-radius: 4px;
+}
+
+.pink{
+    background-color:lightpink;
+}
+
+.blue{
+    background-color: lightblue;
+}
+
+.green{
+    background-color: green;
+}
+
+.black{
+    background-color: black;
+}
+
+.add-cross_container, .lock-unlock_container{
+    width: 20%;
+    display: flex;
+}
+
+.add-cross_container>*, .lock-unlock_container>*{
+    width: 50%;
+    height: 100%;
+}
+
+.plus-container, .multiply-container, .lock-container, .unlock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* fonts are treated as text so text styles can be applied to fonts as well */
+.fa-plus, .fa-times, .fa-lock, .fa-lock-open{
+    font-size: 2rem;
+    font-weight: 400;
+    /* color: white */
+}
+
+/* Main container section */
+
+.main-container{
+    /* border: 1px solid green; */
+    height: calc(100vh - 5.2rem);
+    background-color: #f2f2f2;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.task_container{
+    background-color: white;
+    height: 8rem;
+    width: 13rem;
+}
+
+.task_header{
+    height: 0.5rem;
+    /* background-color: black; */
+}
+
+.task_main-container{
+    padding: 0.5rem;
+    height: calc(100% - 1rem);
+    overflow-y: scroll;
+}
+.task_main-container::-webkit-scrollbar {
+    display: none;
+}
+
+.task_id{
+    color: lightgrey;
+    margin: 0.5rem;
+    margin-left: 0px;;
+}
+
+.active{
+    background-color: rgb(97, 93, 93);
+    border-radius: 6px;
+}
+
+/* modal section */
+.modal{
+    height:20rem;
+    width: 35rem;
+    background-color:white;
+    position: fixed;
+    display: flex;
+}
+
+.input_container{
+    width: 65%;
+    /* border: 1px solid black; */
+    height: 100%;
+    padding: 2rem;
+}
+
+.input_container_text{
+    /* outline: none; */
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.color_container{
+    padding: 1.5rem;
+    background-color: #454444;
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.color_picker{
+    height: 3rem;
+    width: 6rem;
+}
+
+.selected{
+    border: 0.2rem solid white;
+}
+
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 10px;
+    }
+}
